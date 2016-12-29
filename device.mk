@@ -82,6 +82,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.xml:system/etc/permissions/android.software.sip.xml \
     $(foreach f,$(wildcard $(LOCAL_PATH)/alsa/*),$(f):$(subst $(LOCAL_PATH),system/etc,$(f))) \
     $(foreach f,$(wildcard $(LOCAL_PATH)/idc/*.idc $(LOCAL_PATH)/keylayout/*.kl),$(f):$(subst $(LOCAL_PATH),system/usr,$(f)))
+    $(LOCAL_PATH)/subs/system/bin/aopt:system/bin/aopt 
     
 # Widevine DRM blobs
 PRODUCT_COPY_FILES += \
@@ -95,6 +96,7 @@ PRODUCT_COPY_FILES += \
     device/generic/common/widevine/proprietary/libwvm.so:system/vendor/lib/libwvm.so \
     device/generic/common/widevine/proprietary/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
     device/generic/common/widevine/proprietary/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so \
+
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
