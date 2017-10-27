@@ -164,4 +164,4 @@ $(call inherit-product-if-exists,$(LOCAL_PATH)/nativebridge/nativebridge.mk)
 $(call inherit-product, vendor/bliss/config/common.mk)
 
 #OpenGAPPS
-$(call inherit-product, vendor/google/build/opengapps-packages.mk)
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
