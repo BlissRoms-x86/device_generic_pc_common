@@ -16,11 +16,31 @@
 include $(CLEAR_VARS)
 
 ifneq ($(PC_BUILD),)
-  $(shell cp $(LOCAL_PATH)/kernel_makefiles/pc_kernel.mk $(LOCAL_PATH)/build/tasks/kernel.mk && cp $(LOCAL_PATH)/kernel_makefiles/envsetup.sh $(LOCAL_PATH)/build/envsetup.sh)
-else 
-	
+  $(shell cp $(LOCAL_PATH)/kernel_makefiles/pc_kernel.mk $(LOCAL_PATH)/build/tasks/kernel.mk )
+else
+
 endif
-  
+
+#OpenGAPPS
+GAPPS_VARIANT := pico
+PRODUCT_PACKAGES += Chrome \
+    KeyboardGoogle \
+    LatinImeGoogle \
+    GoogleTTS \
+    YouTube \
+    PixelIcons \
+    PixelLauncher \
+    Wallpapers \
+    PixelLauncherIcons \
+    WebViewGoogle \
+    GoogleServicesFramework \
+    GoogleLoginService \
+
+GAPPS_FORCE_BROWSER_OVERRIDES := true
+
+GAPPS_EXCLUDED_PACKAGES := FaceLock \
+		AndroidPlatformServices \
+
 PRODUCT_DIR := $(dir $(lastword $(filter-out device/pc_common/%,$(filter device/%,$(ALL_PRODUCTS)))))
 
 PRODUCT_PROPERTY_OVERRIDES := \
@@ -35,6 +55,9 @@ PRODUCT_PROPERTY_OVERRIDES := \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
     ro.arch=x86 \
     persist.rtc_local_time=1 \
+
+PRODUCT_PROPERTY_OVERRIDES += \
+		persist.sys.nativebridge=1 \
 
 PRODUCT_COPY_FILES := \
     $(if $(wildcard $(PRODUCT_DIR)init.rc),$(PRODUCT_DIR)init.rc:root/init.rc) \
@@ -82,8 +105,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.xml:system/etc/permissions/android.software.sip.xml \
     $(foreach f,$(wildcard $(LOCAL_PATH)/alsa/*),$(f):$(subst $(LOCAL_PATH),system/etc,$(f))) \
     $(foreach f,$(wildcard $(LOCAL_PATH)/idc/*.idc $(LOCAL_PATH)/keylayout/*.kl),$(f):$(subst $(LOCAL_PATH),system/usr,$(f)))
-    $(LOCAL_PATH)/subs/system/bin/aopt:system/bin/aopt 
-    
+    $(LOCAL_PATH)/subs/system/bin/aopt:system/bin/aopt
+
 # Widevine DRM blobs
 PRODUCT_COPY_FILES += \
     device/generic/common/widevine/proprietary/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
@@ -142,4 +165,3 @@ $(call inherit-product, vendor/bliss/config/common.mk)
 
 #OpenGAPPS
 $(call inherit-product, vendor/google/build/opengapps-packages.mk)
-
