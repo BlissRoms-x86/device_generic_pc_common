@@ -109,16 +109,16 @@ PRODUCT_COPY_FILES += \
 
 # Widevine DRM blobs
 PRODUCT_COPY_FILES += \
-    device/generic/common/widevine/proprietary/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
-    device/generic/common/widevine/proprietary/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar \
-    device/generic/common/widevine/proprietary/libdrmframework.so:system/lib/arm/libdrmframework.so \
-    device/generic/common/widevine/proprietary/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
-    device/generic/common/widevine/proprietary/libdrmdecrypt.so:system/vendor/lib/libdrmdecrypt.so \
-    device/generic/common/widevine/proprietary/liboemcrypto.so:system/vendor/lib/liboemcrypto.so \
-    device/generic/common/widevine/proprietary/libwvdrm_L1.so:system/vendor/lib/libwvdrm_L1.so \
-    device/generic/common/widevine/proprietary/libwvm.so:system/vendor/lib/libwvm.so \
-    device/generic/common/widevine/proprietary/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
-    device/generic/common/widevine/proprietary/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so \
+    device/generic/pc_common/widevine/proprietary/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
+    device/generic/pc_common/widevine/proprietary/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar \
+    device/generic/pc_common/widevine/proprietary/libdrmframework.so:system/lib/arm/libdrmframework.so \
+    device/generic/pc_common/widevine/proprietary/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
+    device/generic/pc_common/widevine/proprietary/libdrmdecrypt.so:system/vendor/lib/libdrmdecrypt.so \
+    device/generic/pc_common/widevine/proprietary/liboemcrypto.so:system/vendor/lib/liboemcrypto.so \
+    device/generic/pc_common/widevine/proprietary/libwvdrm_L1.so:system/vendor/lib/libwvdrm_L1.so \
+    device/generic/pc_common/widevine/proprietary/libwvm.so:system/vendor/lib/libwvm.so \
+    device/generic/pc_common/widevine/proprietary/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so \
+    device/generic/pc_common/widevine/proprietary/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so \
 
 
 PRODUCT_TAGS += dalvik.gc.type-precise
