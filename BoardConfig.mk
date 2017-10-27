@@ -85,3 +85,7 @@ TARGET_KERNEL_DIFFCONFIG := device/generic/pc_common/selinux_diffconfig
 COMPATIBILITY_ENHANCEMENT_PACKAGE := true
 PRC_COMPATIBILITY_PACKAGE := true
 ZIP_OPTIMIZATION_NO_INTEGRITY := true
+
+# Switch out Busybox with Toybox
+USE_BUSYBOX := false
+USE_TOOLBOX := true
