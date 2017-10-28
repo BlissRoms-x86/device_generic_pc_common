@@ -67,8 +67,8 @@ SF_START_GRAPHICS_ALLOCATOR_SERVICE := true
 
 USE_CAMERA_STUB ?= false
 
-SUPERUSER_EMBEDDED := true
-SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
+# SUPERUSER_EMBEDDED := true
+# SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
 
 # This enables the wpa wireless driver
 BOARD_WPA_SUPPLICANT_DRIVER ?= NL80211
