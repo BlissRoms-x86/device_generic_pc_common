@@ -33,13 +33,11 @@ PRODUCT_PACKAGES += Chrome \
     Wallpapers \
     PixelLauncherIcons \
     WebViewGoogle \
-    GoogleServicesFramework \
-    GoogleLoginService \
 
 GAPPS_FORCE_BROWSER_OVERRIDES := true
 
 GAPPS_EXCLUDED_PACKAGES := FaceLock \
-		AndroidPlatformServices \
+		PrebuiltGmsCoreInstantApps \
 
 PRODUCT_DIR := $(dir $(lastword $(filter-out device/pc_common/%,$(filter device/%,$(ALL_PRODUCTS)))))
 
