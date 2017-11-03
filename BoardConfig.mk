@@ -20,10 +20,10 @@ BOARD_MALLOC_ALIGNMENT := 16
 
 # Enable dex-preoptimization to speed up the first boot sequence
 # of an SDK AVD. Note that this operation only works on Linux for now
-ifeq ($(HOST_OS),linux)
-WITH_DEXPREOPT := true
-WITH_DEXPREOPT_PIC := true
-endif
+# ifeq ($(HOST_OS),linux)
+# WITH_DEXPREOPT := true
+# WITH_DEXPREOPT_PIC := true
+# endif
 
 # the following variables could be overridden
 TARGET_PRELINK_MODULE := false
@@ -87,8 +87,8 @@ PRC_COMPATIBILITY_PACKAGE := true
 ZIP_OPTIMIZATION_NO_INTEGRITY := true
 
 # Switch out Busybox with Toybox
-USE_BUSYBOX := false
-USE_TOOLBOX := true
+# USE_BUSYBOX := false
+# USE_TOOLBOX := true
 
 # Blissful Building Options
 SYS_UPGRADE_DEFAULT_URL := https://downloads.blissroms.com/Bliss/Official/x86/oto_ota.ver
