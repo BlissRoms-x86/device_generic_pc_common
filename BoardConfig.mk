@@ -66,6 +66,42 @@ BOARD_USES_DRM_HWCOMPOSER ?= true
 BOARD_USES_MINIGBM := true
 USE_CAMERA_STUB ?= false
 
+# from Intel
+LIBDRM_VER := intel
+BOARD_USE_MESA := true
+
+BOARD_GPU_DRIVERS ?= i965 swrast
+ifneq ($(strip $(BOARD_GPU_DRIVERS)),)
+TARGET_HARDWARE_3D := true
+endif
+
+BOARD_USES_DRM_HWCOMPOSER := false
+BOARD_USES_IA_HWCOMPOSER := true
+
+BOARD_USES_MINIGBM := true
+BOARD_ENABLE_EXPLICIT_SYNC := true
+INTEL_MINIGBM := external/minigbm
+
+BOARD_USES_GRALLOC1 := true
+
+TARGET_USES_HWC2 := true
+
+##############################################################
+# Source: device/intel/mixins/groups/vendor-partition/true/BoardConfig.mk
+##############################################################
+# Those 3 lines are required to enable vendor image generation.
+# Remove them if vendor partition is not used.
+TARGET_COPY_OUT_VENDOR := vendor
+BOARD_VENDORIMAGE_PARTITION_SIZE := 1572864000
+ifeq ($(SPARSE_IMG),true)
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+else
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := squashfs
+BOARD_VENDORIMAGE_SQUASHFS_COMPRESSOR := gzip
+endif
+
+# end Intel
+
 SUPERUSER_EMBEDDED := true
 SUPERUSER_PACKAGE_PREFIX := com.android.settings.cyanogenmod.superuser
 
