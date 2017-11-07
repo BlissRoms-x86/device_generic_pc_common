@@ -10,7 +10,7 @@
 ifneq ($(TARGET_NO_KERNEL),true)
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 
-KERNEL_DIR ?= kernel/pc_common
+KERNEL_DIR ?= kernel/android_ia
 
 ifneq ($(filter x86%,$(TARGET_ARCH)),)
 TARGET_KERNEL_ARCH ?= $(TARGET_ARCH)
