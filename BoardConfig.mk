@@ -87,8 +87,8 @@ PRC_COMPATIBILITY_PACKAGE := true
 ZIP_OPTIMIZATION_NO_INTEGRITY := true
 
 # Switch out Busybox with Toybox
-# USE_BUSYBOX := false
-# USE_TOOLBOX := true
+USE_BUSYBOX := true
+USE_TOOLBOX := false
 
 # Blissful Building Options
 SYS_UPGRADE_DEFAULT_URL := https://downloads.blissroms.com/Bliss/Official/x86/oto_ota.ver
