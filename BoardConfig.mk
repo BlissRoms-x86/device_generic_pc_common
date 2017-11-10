@@ -89,3 +89,5 @@ ZIP_OPTIMIZATION_NO_INTEGRITY := true
 # Switch out Busybox with Toybox
 USE_BUSYBOX := false
 USE_TOOLBOX := true
+
+DEVICE_MANIFEST_FILE := device/generic/common/manifest.xml
