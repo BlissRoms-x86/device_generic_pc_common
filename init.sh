@@ -143,7 +143,7 @@ function init_hal_gralloc()
 				set_property ro.hardware.gralloc gbm
 			fi
 			;;
-		0*inteldrmfb|0*radeondrmfb|0*nouveaufb|0*svgadrmfb|0*amdgpudrmfb)
+		0*radeondrmfb|0*nouveaufb|0*svgadrmfb|0*amdgpudrmfb)
 			if [ "$HWACCEL" != "0" ]; then
 				set_property ro.hardware.gralloc drm
 				set_drm_mode
