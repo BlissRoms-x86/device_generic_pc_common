@@ -153,7 +153,6 @@ function init_hal_gralloc()
 			init_uvesafb
 			;&
 		0*)
-			[ "$HWACCEL" = "1" ] || set_property debug.egl.hw 0
 			;;
 	esac
 
