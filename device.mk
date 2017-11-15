@@ -15,12 +15,12 @@
 #
 include $(CLEAR_VARS)
 
-ifneq ($(PC_BUILD),)
-  $(shell cp $(LOCAL_PATH)/kernel_makefiles/pc_kernel.mk $(LOCAL_PATH)/build/tasks/kernel.mk ) \
-	$(shell mv $(abspath /vendor/bliss/build/tasks/kernel.mk $(LOCAL_PATH)/kernel_makefiles/device_kernel.mk) )
-else
-  $(shell cp $(LOCAL_PATH)/kernel_makefiles/device_kernel.mk $(LOCAL_PATH)/build/tasks/kernel.mk )
-endif
+# ifneq ($(PC_BUILD),)
+#   $(shell cp $(LOCAL_PATH)/kernel_makefiles/pc_kernel.mk $(LOCAL_PATH)/build/tasks/kernel.mk ) \
+#	$(shell mv $(abspath /vendor/bliss/build/tasks/kernel.mk $(LOCAL_PATH)/kernel_makefiles/device_kernel.mk) )
+# else
+#   $(shell cp $(LOCAL_PATH)/kernel_makefiles/device_kernel.mk $(LOCAL_PATH)/build/tasks/kernel.mk )
+# endif
 
 #OpenGAPPS
 GAPPS_VARIANT := pico
