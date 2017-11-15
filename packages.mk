@@ -101,11 +101,11 @@ PRODUCT_PACKAGES += \
 
 # OtoPackages
 PRODUCT_PACKAGES += \
-    OtoCompress \ 
-    OtoFileManager \ 
-    OtoKeyboardMap \ 
-    OtoLauncher\ 
-    OtoOta \ 
-    OtoPinyinIME \ 
-    OtoTerminal \ 
-    OtoVirtualGUI \ 
+    OtoCompress \
+    OtoFileManager \
+    OtoKeyboardMap \
+    OtoLauncher\
+    OtoOta \
+    OtoPinyinIME \
+    OtoTerminal \
+    OtoVirtualGUI
