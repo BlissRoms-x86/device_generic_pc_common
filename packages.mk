@@ -98,3 +98,14 @@ PRODUCT_PACKAGES += \
 # Third party apps
 PRODUCT_PACKAGES += \
     Eleven \
+
+# OtoPackages
+PRODUCT_PACKAGES += \
+    OtoCompress \ 
+    OtoFileManager \ 
+    OtoKeyboardMap \ 
+    OtoLauncher\ 
+    OtoOta \ 
+    OtoPinyinIME \ 
+    OtoTerminal \ 
+    OtoVirtualGUI \ 
