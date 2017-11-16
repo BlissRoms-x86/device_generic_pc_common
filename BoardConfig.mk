@@ -92,3 +92,36 @@ USE_BUSYBOX := false
 USE_TOOLBOX := true
 
 DEVICE_MANIFEST_FILE := device/generic/pc_common/manifest.xml
+
+WITH_BLISS_CHARGER := false
+COMPATIBILITY_ENHANCEMENT_PACKAGE := true
+PRC_COMPATIBILITY_PACKAGE := true
+ZIP_OPTIMIZATION_NO_INTEGRITY := true
+
+# Blissful Building Options
+SYS_UPGRADE_DEFAULT_URL := https://downloads.blissroms.com/Bliss/Official/x86/oto_ota.ver
+BLISS_TABLET := true
+BLISS_CHANGELOG := true
+#BLISS_AUDIO_MOD := viper
+#BLISS_BUILD_BLOCK := 1
+BLISSIFY := true
+#BLISS_O3 := true
+BLISS_GRAPHITE := true
+BLISS_STRICT := false
+#BLISS_KRAIT := true
+FLOOP_NEST_OPTIMIZE := true
+#ENABLE_GCCONLY := true
+BLISS_PIPE := true
+TARGET_ENABLE_UKM := true
+BLISS_PTHREAD := true
+BLISS_GOMP := true
+BLISS_EXTRAGCC := true
+#BLISS_SANITIZE := true
+#TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
+FAST_MATH := true
+ENABLE_MODULAR_O3 := true
+ENABLE_LTO := true
+LINK_TIME_OPTIMIZATIONS := true
+TARGET_USE_ION_COMPAT := true
+#TARGET_USE_KRAIT_PLD_SET := true
+#WITH_LZMA_OTA := true
