@@ -94,12 +94,12 @@ kernel: $(INSTALLED_KERNEL_TARGET)
 
 endif # TARGET_PREBUILT_KERNEL
 
-ifndef PC_BUILD
+ifndef CM_BUILD
 $(INSTALLED_KERNEL_TARGET): $(TARGET_PREBUILT_KERNEL) | $(ACP)
 	$(copy-file-to-new-target)
 ifdef TARGET_PREBUILT_MODULES
 	mkdir -p $(TARGET_OUT)/lib
 	$(hide) cp -r $(TARGET_PREBUILT_MODULES) $(TARGET_OUT)/lib
 endif
-endif # PC_BUILD
+endif # CM_BUILD
 endif # KBUILD_OUTPUT
