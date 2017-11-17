@@ -75,7 +75,7 @@ BOARD_WPA_SUPPLICANT_DRIVER ?= NL80211
 WPA_SUPPLICANT_VERSION ?= VER_2_1_DEVEL
 WIFI_DRIVER_MODULE_PATH ?= auto
 
-BOARD_GPU_DRIVERS ?= i915 i965 nouveau r300g r600g radeonsi virgl vmwgfx swrast
+BOARD_GPU_DRIVERS ?= i915 i965 nouveau r300g r600g radeonsi virgl vmwgfx
 ifneq ($(strip $(BOARD_GPU_DRIVERS)),)
 TARGET_HARDWARE_3D := true
 endif
@@ -88,18 +88,14 @@ PRC_COMPATIBILITY_PACKAGE := true
 ZIP_OPTIMIZATION_NO_INTEGRITY := true
 
 # Switch out Busybox with Toybox
-USE_BUSYBOX := false
-USE_TOOLBOX := true
+# USE_BUSYBOX := false
+# USE_TOOLBOX := true
 
 DEVICE_MANIFEST_FILE := device/generic/pc_common/manifest.xml
 
-WITH_BLISS_CHARGER := false
-COMPATIBILITY_ENHANCEMENT_PACKAGE := true
-PRC_COMPATIBILITY_PACKAGE := true
-ZIP_OPTIMIZATION_NO_INTEGRITY := true
-
 # Blissful Building Options
 SYS_UPGRADE_DEFAULT_URL := https://downloads.blissroms.com/Bliss/Official/x86/oto_ota.ver
+WITH_BLISS_CHARGER := false
 BLISS_TABLET := true
 BLISS_CHANGELOG := true
 #BLISS_AUDIO_MOD := viper
