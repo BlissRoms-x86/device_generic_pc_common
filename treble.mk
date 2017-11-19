@@ -22,7 +22,7 @@ PRODUCT_PACKAGES += \
 # Camera HAL
 PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.2-impl \
-    android.hardware.camera.provider@2.4-impl
+    android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service
 
 # DRM HAL
