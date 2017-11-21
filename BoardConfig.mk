@@ -86,7 +86,7 @@ COMPATIBILITY_ENHANCEMENT_PACKAGE := true
 PRC_COMPATIBILITY_PACKAGE := true
 ZIP_OPTIMIZATION_NO_INTEGRITY := true
 
-DEVICE_MANIFEST_FILE := device/generic/common/manifest.xml
+DEVICE_MANIFEST_FILE := device/generic/pc_common/manifest.xml
 
 # Switch out Busybox with Toybox
 # USE_BUSYBOX := false
