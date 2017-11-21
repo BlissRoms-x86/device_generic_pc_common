@@ -73,7 +73,6 @@ USE_CAMERA_STUB ?= false
 # This enables the wpa wireless driver
 BOARD_WPA_SUPPLICANT_DRIVER ?= NL80211
 WPA_SUPPLICANT_VERSION ?= VER_2_1_DEVEL
-WIFI_DRIVER_MODULE_PATH ?= auto
 
 BOARD_GPU_DRIVERS ?= i915 i965 nouveau r300g r600g radeonsi virgl vmwgfx
 ifneq ($(strip $(BOARD_GPU_DRIVERS)),)
@@ -87,11 +86,11 @@ COMPATIBILITY_ENHANCEMENT_PACKAGE := true
 PRC_COMPATIBILITY_PACKAGE := true
 ZIP_OPTIMIZATION_NO_INTEGRITY := true
 
+DEVICE_MANIFEST_FILE := device/generic/common/manifest.xml
+
 # Switch out Busybox with Toybox
 # USE_BUSYBOX := false
 # USE_TOOLBOX := true
-
-DEVICE_MANIFEST_FILE := device/generic/pc_common/manifest.xml
 
 # Blissful Building Options
 SYS_UPGRADE_DEFAULT_URL := https://downloads.blissroms.com/Bliss/Official/x86/oto_ota.ver

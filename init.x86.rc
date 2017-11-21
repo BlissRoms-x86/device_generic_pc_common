@@ -45,7 +45,8 @@ on boot
     # workaround for h.265 slowness
     setprop sys.media.vdec.drop 0
 
-service wpa_supplicant /system/bin/wpa_supplicant -c/data/misc/wifi/wpa_supplicant.conf \
+service wpa_supplicant /vendor/bin/hw/wpa_supplicant -c/data/misc/wifi/wpa_supplicant.conf \
+    -dd \
     -iwlan0 -Dnl80211 \
     -O/data/misc/wifi/sockets \
     -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
@@ -82,6 +83,11 @@ service wacom-input /system/bin/wacom-input
 service tablet-mode /system/bin/tablet-mode
     disabled
     oneshot
+
+service ctrl-alt-del /system/bin/input keyevent --longpress POWER
+    disabled
+    oneshot
+    keycodes 97 100 111
 
 on property:system_init.startsurfaceflinger=0
     # disable cursor blinking
